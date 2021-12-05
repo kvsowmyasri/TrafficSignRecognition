@@ -1,0 +1,116 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="robots" content="noindex,follow" />
+    <title>Traffic Sign</title>
+    <link
+      href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      var loadFile = function (event) {
+        var image = document.getElementById("output");
+        image.src = URL.createObjectURL(event.target.files[0]);
+      };
+    </script>
+    <style type="text/css">
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #uploader {
+        margin: 0 auto;
+      }
+      .info {
+        text-align: center;
+        padding: 50px 0;
+        color: #666;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+      #runtime {
+        text-transform: uppercase;
+      }
+      .info span {
+        color: #81c468;
+      }
+      .img-preview {
+        width: 256px;
+        height: 256px;
+        position: relative;
+        border: 5px solid #f8f8f8;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
+
+      .img-preview > div {
+        background-size: 256px 256px;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 50%;
+        float: left;
+      }
+
+      input[type="file"] {
+        display: none;
+      }
+
+      .upload-label {
+        display: inline-block;
+        padding: 12px 30px;
+        background: #39d2b4;
+        color: #fff;
+        font-size: 1em;
+        transition: all 0.4s;
+        cursor: pointer;
+      }
+
+      .upload-label:hover {
+        background: #34495e;
+        color: #39d2b4;
+      }
+
+      .loader {
+        border: 8px solid #f3f3f3; /* Light grey */
+        border-top: 8px solid #3498db; /* Blue */
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Traffic Sign</a>
+        <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">
+          Help
+        </button>
+      </div>
+    </nav>
+    <div class="container">
+      <div id="content" style="margin-top: 2em">
+        {% block content %}{% endblock %}
+      </div>
+    </div>
+  </body>
+</html>

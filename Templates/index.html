@@ -1,0 +1,55 @@
+
+
+{% extends "base.html" %} {% block content %}
+
+<h2>Image Classifier</h2>
+
+<div>
+    <form id="upload-file" method="post" enctype="multipart/form-data">
+        <label for="imageUpload" class="upload-label">
+            Choose File
+        </label>
+        <input type="file" name="file" id="imageUpload" onchange="loadFile(event)",accept=".png, .jpg, .jpeg">
+    
+
+    <div class="image-section">
+        <div class="img-preview">
+            <div id="imagePreview">
+				<p><img id="output" style="width: 50%;
+					float:left;"/></p>
+
+            </div>
+        </div>
+        <div>
+            
+			
+		   <button type="submit" name="classify" value="classify">Classify</button>
+        </div>
+    </div>
+
+    <div class="loader" style="display:none;"></div>
+    <div>{{result}}</div>
+    
+    
+    </br>
+	<div>
+		<button type="submit" name="play" value="play">Play</button>
+	</div>
+	  <div>
+		<label for="language">Choose Language:</label>
+		<select name="language" id="language">
+		  <option value="hi">Hindi</option>
+		  <option value="es">Spanish</option>
+		  <option value="pt">Portuguese</option>
+		  <option value="zh">Chinese</option>
+		</select>
+		<button type="submit" name="translate" value="translate">
+		  Translate
+		</button>
+		<div>{{translation}}</div>
+		</div>
+	</form>
+
+</div>
+
+{% endblock %}

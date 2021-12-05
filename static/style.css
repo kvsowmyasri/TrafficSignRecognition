@@ -1,0 +1,209 @@
+.top-pad {
+  margin-top: 35%;
+  margin-left: 82%;
+  position: absolute;
+}
+
+.img-dec {
+  width: 50%;
+  float: left;
+}
+
+.upload-form,
+.upload-form div,
+.upload-form span,
+.upload-form input,
+.upload-form a,
+.upload-form h1,
+.upload-form p {
+  /*margin: 0;*/
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+/* Form Container */
+.upload-form {
+  position: relative;
+  z-index: 100;
+  cursor: default;
+  width: 1000px;
+  height: 600px;
+  padding: 25px 25px 65px 25px;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-image: url("https://thethaiger.com/wp-content/uploads/2019/05/Traffic-red-light-camera-1000x600.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+input[type="button"],
+input[type="submit"] {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  /*margin: 4px 2px;*/
+  cursor: pointer;
+}
+
+::-webkit-file-upload-button {
+  background: red;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+}
+
+/* Clear Floats */
+.upload-form .cb {
+  clear: both;
+}
+
+/* Form Title */
+.upload-form h1 {
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: black;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.65);
+  padding-bottom: 2px;
+  border-bottom: 1px solid #7a7b80;
+}
+
+/* Replace Title with Image */
+.upload-form h1.replace-text {
+  display: block;
+  width: 100%;
+  height: 17px;
+  padding-bottom: 7px;
+  text-indent: -9999px;
+  background: url(../img/title.png) no-repeat left center;
+}
+
+/* Close Button */
+.upload-form .close {
+  position: absolute;
+  display: block;
+  width: 12px;
+  height: 12px;
+  top: 28px;
+  right: 24px;
+}
+
+/* Paragraph */
+.upload-form p {
+  padding: 10px 0;
+  font-family: sans-serif;
+  font-size: 12px;
+  color: #a4a5a8;
+}
+
+/* Select & Upload Buttons */
+.upload-form .button {
+  display: inline-block;
+  height: 30px;
+  margin: 15px 0;
+
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #777;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 30px;
+
+  background: #ffffff;
+  background: -webkit-linear-gradient(top, #ffffff 0%, #f6f6f6 100%);
+  background: -moz-linear-gradient(top, #ffffff 0%, #f6f6f6 100%);
+  background: -o-linear-gradient(top, #ffffff 0%, #f6f6f6 100%);
+  background: -ms-linear-gradient(top, #ffffff 0%, #f6f6f6 100%);
+  background: linear-gradient(top, #ffffff 0%, #f6f6f6 100%);
+}
+
+.upload-form .button:hover {
+  background: #f2f2f2;
+  background: -webkit-linear-gradient(top, #f2f2f2 0%, #eaeaea 100%);
+  background: -moz-linear-gradient(top, #f2f2f2 0%, #eaeaea 100%);
+  background: -o-linear-gradient(top, #f2f2f2 0%, #eaeaea 100%);
+  background: -ms-linear-gradient(top, #f2f2f2 0%, #eaeaea 100%);
+  background: linear-gradient(top, #f2f2f2 0%, #eaeaea 100%);
+}
+
+.upload-form #pickfiles {
+  width: 99px;
+  float: left;
+  border-right: 1px solid #999;
+
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+
+.upload-form #uploadfiles {
+  width: 100px;
+  float: right;
+
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.img-preview {
+  width: 256px;
+  height: 256px;
+  position: relative;
+  border: 5px solid #f8f8f8;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.img-preview > div {
+  width: 100%;
+  height: 100%;
+  background-size: 256px 256px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.upload-label {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #39d2b4;
+  color: #fff;
+  font-size: 1em;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.upload-label:hover {
+  background: #34495e;
+  color: #39d2b4;
+}
+
+.loader {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
